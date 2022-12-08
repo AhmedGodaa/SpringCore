@@ -10,14 +10,7 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
     <!--    <context:component-scan base-package="net.godaa.BeanLifeCycle"/>-->
 
-
-    <bean id="emailService" class="net.godaa.BeanFactory.EmailService" scope="prototype"/>
-
-
-    <bean id="customerBean" class="net.godaa.BeanLifeCycle.Customer">
-        <constructor-arg name="firstname" value="Default Value"/>
-        <!--        must add setter to be able to add the value -->
-        <property name="firstname" value="Godaa"/>
-    </bean>
+    <bean id="model" class="net.godaa.DependencyInjection.xml.Model" autowire="constructor"/>
+    <bean id="modelDao" class="net.godaa.DependencyInjection.xml.ModelDao"/>
 
 </beans>
